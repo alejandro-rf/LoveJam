@@ -51,12 +51,11 @@ function Play:new()
 
   font = love.graphics.newFont("resources/font/Nechao Sharp.ttf", 50)
   love.graphics.setFont(font)
-  
+  Data = Data or require("data")
+  Settings = Settings or require("resources/src/settings")
   if colorSelection == 0 then 
     intro = intro.init("resources/video/TecnogridBackground.ogv")
-  end
-  
-  if colorSelection == 1 then
+  else
     intro = intro.init(VIDEO_BLACK_AND_WHITE)
   end
   
@@ -76,9 +75,7 @@ function Play:new()
     enemyArrowLeftUp = EnemyArrow(ENEMY_ARROW_IMAGE_PATH, ENEMY_ARROW_DEFAULT_POSITION_UP_LEFT.x,ENEMY_ARROW_DEFAULT_POSITION_UP_LEFT.y,ENEMY_ARROW_DEFAULT_SPEED, ENEMY_DIRECTION_RIGHT.x,ENEMY_DIRECTION_RIGHT.y, ENEMY_ARROW_QUAD_WIDTH, ENEMY_ARROW_QUAD_HEIGHT)
     
     enemyArrowRightUp = EnemyArrow(ENEMY_ARROW_IMAGE_PATH, ENEMY_ARROW_DEFAULT_POSITION_UP_RIGHT.x,ENEMY_ARROW_DEFAULT_POSITION_UP_RIGHT.y,ENEMY_ARROW_DEFAULT_SPEED, ENEMY_DIRECTION_RIGHT.x,ENEMY_DIRECTION_RIGHT.y,  ENEMY_ARROW_QUAD_WIDTH, ENEMY_ARROW_QUAD_HEIGHT)
-  end
-
-  if colorSelection == 1 then
+  else
     enemySquare = EnemySquare(ENEMY_SQUARE_IMAGE_PATH_BW, ENEMY_SQUARE_DEFAULT_POSITION.x, ENEMY_SQUARE_DEFAULT_POSITION.y, ENEMY_SQUARE_DEFAULT_SPEED, ENEMY_DIRECTION_DOWN.x, ENEMY_DIRECTION_DOWN.y, ENEMY_SQUARE_QUAD_WIDTH, ENEMY_SQUARE_QUAD_HEIGHT)
     
     enemyRectangleFillLeft = EnemyRectangleFill(ENEMY_RECTANGLE_FILL_IMAGE_PATH_BW, ENEMY_RECTANGLE_FILL_LEFT_POSITION.x, ENEMY_RECTANGLE_FILL_LEFT_POSITION.y, ENEMY_RECTANGLE_FILL_DEFAULT_SPEED, ENEMY_DIRECTION_RIGHT.x, ENEMY_DIRECTION_RIGHT.y, ENEMY_RECTANGLE_FILL_QUAD_WIDTH, ENEMY_RECTANGLE_FILL_QUAD_HEIGHT)
