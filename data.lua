@@ -86,5 +86,11 @@ ENEMY_RECTANGLE_FILL_QUAD_HEIGHT = 1080
 ENEMY_RECTANGLE_FILL_LEFT_POSITION = Vector.new(-ENEMY_RECTANGLE_FILL_QUAD_WIDTH / 2, ENEMY_RECTANGLE_FILL_QUAD_HEIGHT / 2)
 ENEMY_RECTANGLE_FILL_RIGHT_POSITION = Vector.new(SCREEN_WIDTH + ENEMY_RECTANGLE_FILL_QUAD_WIDTH / 2, ENEMY_RECTANGLE_FILL_QUAD_HEIGHT / 2 )
 
+-- black and white option
+ENEMY_ARROW_IMAGE_PATH_BW = "resources/images/enemies/animatedArrow_BW.png"
+ENEMY_RECTANGLE_FILL_IMAGE_PATH_BW = "resources/images/enemies/rectangleFill_BW.png"
+ENEMY_SQUARE_IMAGE_PATH_BW = "resources/images/enemies/animatedSquare_BW.png"
+VIDEO_BLACK_AND_WHITE = "resources/vide/TecnogridBackground.ogv"
+
 
 
