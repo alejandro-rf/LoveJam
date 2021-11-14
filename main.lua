@@ -3,11 +3,13 @@ require "resources/src/menu"
 require "resources/src/menuBackground"
 require "resources/src/settings"
 require "resources/src/play"
+require "resources/src/scores"
 
 mainMenu = Menu()
 background = MenuBackground()
 settings = Settings()
 playGame = Play()
+scoresMenu = Scores()
 
 function love.load(arg)
   if arg[#arg] == "-debug" then 
@@ -15,6 +17,8 @@ function love.load(arg)
   end -- Enable the debugging with ZeroBrane Studio
   
   state = "mainMenu"
+  
+  LoadScores()
 end
 
 function love.update(dt)
@@ -27,7 +31,7 @@ function love.update(dt)
   end
   
   if state == "scores" then
-    --scores(dt)
+    highscoresMenu(dt)
   end  
   
   if state == "settings" then
@@ -63,5 +67,15 @@ function play(dt)
   
   function love.draw()
     playGame:draw()
+  end
+end
+
+function highscoresMenu(dt)
+  scoresMenu:update(dt)
+  background:update(dt)
+  
+  function love.draw()
+    background:draw()
+    scoresMenu:draw()
   end
 end
