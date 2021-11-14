@@ -90,7 +90,7 @@ ENEMY_RECTANGLE_FILL_RIGHT_POSITION = Vector.new(SCREEN_WIDTH + ENEMY_RECTANGLE_
 ENEMY_ARROW_IMAGE_PATH_BW = "resources/images/enemies/animatedArrow_BW.png"
 ENEMY_RECTANGLE_FILL_IMAGE_PATH_BW = "resources/images/enemies/rectangleFill_BW.png"
 ENEMY_SQUARE_IMAGE_PATH_BW = "resources/images/enemies/animatedSquare_BW.png"
-VIDEO_BLACK_AND_WHITE = "resources/vide/TecnogridBackground.ogv"
+VIDEO_BLACK_AND_WHITE = "resources/video/TecnogridBackgroundBN.ogv"
 
 
 
